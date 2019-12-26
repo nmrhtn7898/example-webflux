@@ -1,0 +1,27 @@
+plugins {
+    id 'org.springframework.boot' version '2.2.2.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+    id 'java'
+}
+
+group = 'com.syj'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // WebFlux (Netty 사용)
+    implementation 'org.springframework.boot:spring-boot-starter-webflux'
+    // MongoDB
+    implementation 'org.springframework.boot:spring-boot-starter-data-mongodb-reactive'
+    // lombok
+    implementation 'org.projectlombok:lombok'
+    annotationProcessor 'org.projectlombok:lombok'
+}
+
+test {
+    useJUnitPlatform()
+}
